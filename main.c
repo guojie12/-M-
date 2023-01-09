@@ -48,7 +48,7 @@ uint32_t Enc_DiffTimes(uint32_t t1, uint32_t t2)
   * @param   none
   * @return  计数（带正负号） int32
   * @author  Terry
-  * @date    2020.2.16
+  * @date    2023.1.6
   * @version v1.0
   * @note    间隔时间T内，计数值不能超过MAXCOUNT
   *          假设T = 0.1秒，每秒计数最大值为MAXCOUNT * 10
@@ -65,7 +65,7 @@ int32_t Enc_DiffCnt(uint16_t c1,uint16_t c2)
 	{
 		Angle += ENCODER_TIM_PERIOD;
 	}
-  /*修改计数方向，同时会修改速度和加速度的方向  Terry 2020.2.18*/
+  /*修改计数方向，同时会修改速度和加速度的方向  Terry 2020=3.2=1.6*/
   if(s_dir)
     Angle = -Angle;
 
@@ -199,7 +199,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   * @param   none
   * @return  none
   * @author  Terry
-  * @date    2020.2.16
+  * @date    2023.1.6
   * @version v1.0
   * @note    最好放在操作系统的系统时钟回调函数中执行
   ***********************************************************/
